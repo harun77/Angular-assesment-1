@@ -1,0 +1,32 @@
+
+  <div class="container">
+    <h2>UIT Team JavaScript exam</h2>
+    <form class="form-horizontal" role="form">
+      <div class="form-group">
+        <button id="start" type="button" class="btn btn-default" (click)="startrandom()">start random</button>
+        <button id="stop" type="button" class="btn btn-default" (click)="stoprandom()">stop random</button>
+        <button id="sort" type="button" class="btn btn-default" (click)="sort(true)">sort</button>
+      </div>
+    </form>
+
+    <div class="contents">
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Id</th>
+            <th>Image</th>
+            <th>Name</th>
+            <th>Price</th>
+          </tr>
+        </thead>
+        <tbody id="data">
+          <tr *ngFor="let element of TABLE_DATA">
+            <th>{{element.id}}</th>
+            <th><img src="./assets/{{element.thumbnailUrl}}"></th>
+            <th>{{element.name}}</th>
+            <th>{{element.price}}</th>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
